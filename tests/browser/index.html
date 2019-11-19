@@ -1,0 +1,31 @@
+<html>
+
+
+<head>
+    <!-- webpack version -->
+    <script src="./../../dist/bundle.js"></script>
+
+    <!-- rollup version -->
+    <!-- <script src="./pure-bundle.js"></script> -->
+
+    <script>
+        function test(bson_package) {
+            console.log(bson_package);
+            let serial = bson_package.Bson.serialize({x:1})
+            console.log(serial);
+            let deserial = bson_package.Bson.deserialize(serial)
+            console.log(deserial);
+        }
+    </script>
+
+    <script>
+        test(bson_webpack);
+
+
+        // test(bson_rollup);
+    </script>
+
+</head>
+
+
+</html>
